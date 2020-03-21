@@ -6,7 +6,9 @@ import Menu from '../../components/Menu';
 import Feed from '../../components/Feed';
 
 export default function Main() {
-  useEffect(() => (document.title = 'Home / Twitter'), []);
+  useEffect(() => {
+    document.title = 'Home / Twitter';
+  }, []);
 
   return (
     <Container>

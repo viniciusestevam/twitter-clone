@@ -110,5 +110,6 @@ export const ProfileIcon = styled(UserCircle).attrs({
 export const MoreIcon = styled(Ellipsis).attrs({
   height: '50px'
 })`
-  ${iconPadMg}
+  ${iconPadMg};
+  margin-left: 6px;
 `;

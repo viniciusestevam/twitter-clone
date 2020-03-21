@@ -18,7 +18,7 @@ export const Title = styled.h3`
 `;
 
 export const StarIcon = styled(Star).attrs({
-  height: '45px'
+  height: '30px'
 })`
   color: ${blue};
   padding: 5px 10px;
