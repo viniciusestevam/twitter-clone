@@ -38,9 +38,13 @@ export const MenuItem = styled.span`
 export const ActiveMenuItem = styled.span`
   padding-right: 20px;
   color: ${blue};
-  background-color: ${lightBlue};
   cursor: pointer;
   border-radius: 25px;
+  :hover {
+    background-color: ${lightBlue};
+    cursor: pointer;
+    border-radius: 25px;
+  }
 `;
 
 export const TwitterIcon = styled(Twitter).attrs({

@@ -5,7 +5,7 @@ import { Container } from './styles';
 export default function TweetButton() {
   return (
     <Container>
-      <span>Tweet</span>
+      <strong>Tweet</strong>
     </Container>
   );
 }
