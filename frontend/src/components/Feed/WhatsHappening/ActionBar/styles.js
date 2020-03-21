@@ -20,7 +20,7 @@ export const LeftIconsContainer = styled.div`
 `;
 
 export const RightIconsContainer = styled.div`
-  width: 30%;
+  width: 220px;
   display: flex;
   justify-content: space-between;
   align-items: center;
