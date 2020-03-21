@@ -10,19 +10,14 @@ export default gql`
   }
 
   type Mutation {
-    createTweet(
-      author: String!
-      user: String!
-      time: Date!
-      message: String!
-    ): Tweet!
+    createTweet(author: String!, user: String!, message: String!): Tweet!
   }
 
   type Tweet {
     id: ID!
     author: String!
     user: String!
-    time: Date!
     message: String!
+    createdAt: String!
   }
 `;
