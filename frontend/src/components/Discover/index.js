@@ -37,13 +37,13 @@ export default function Discover() {
     },
     {
       id: 1,
-      name: '#linkedin.com/in/viniciusestevam1',
+      name: '#linkedin/viniciusestevam1',
       tweets: '31K Tweets',
       link: 'https://linkedin.com/in/vinicius-estevam1'
     },
     {
       id: 1,
-      name: '#github.com/estevam31',
+      name: '#github/estevam31',
       tweets: '31K Tweets',
       link: 'https://github.com/estevam31'
     }
