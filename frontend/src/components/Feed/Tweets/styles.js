@@ -63,7 +63,7 @@ export const Header = styled.div`
 `;
 
 export const UserData = styled.div`
-  width: 20%;
+  width: 500px;
   height: 100%;
   display: flex;
   align-items: center;

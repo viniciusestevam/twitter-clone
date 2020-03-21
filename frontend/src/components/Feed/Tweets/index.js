@@ -20,18 +20,17 @@ import {
   Stats
 } from './styles';
 
+import ReactTimeAgo from 'react-time-ago';
+
 export default function Tweets() {
   const [tweets, setTweets] = useState([
-    { id: 1, author: 'teste', user: '@teste', time: '3h', message: 'teste' },
-    { id: 2, author: 'teste', user: '@teste', time: '3h', message: 'teste' },
-    { id: 3, author: 'teste', user: '@teste', time: '3h', message: 'teste' },
-    { id: 4, author: 'teste', user: '@teste', time: '3h', message: 'teste' },
-    { id: 5, author: 'teste', user: '@teste', time: '3h', message: 'teste' },
-    { id: 6, author: 'teste', user: '@teste', time: '3h', message: 'teste' },
-    { id: 7, author: 'teste', user: '@teste', time: '3h', message: 'teste' },
-    { id: 8, author: 'teste', user: '@teste', time: '3h', message: 'teste' },
-    { id: 9, author: 'teste', user: '@teste', time: '3h', message: 'teste' },
-    { id: 10, author: 'teste', user: '@teste', time: '3h', message: 'teste' }
+    {
+      id: 1,
+      author: 'julinho mequetrefe',
+      user: '@teste',
+      time: new Date(Date.now()),
+      message: 'teste'
+    }
   ]);
   return (
     <Container>
@@ -45,7 +44,9 @@ export default function Tweets() {
               <UserData>
                 <TweetAuthor>{t.author}</TweetAuthor>
                 <TweetData>{t.user}</TweetData>
-                <TweetData>· {t.time}</TweetData>
+                <TweetData>
+                  · <ReactTimeAgo date={t.time} locale="en" />
+                </TweetData>
               </UserData>
               <ArrowDown />
             </Header>

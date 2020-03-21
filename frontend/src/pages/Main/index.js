@@ -4,6 +4,7 @@ import { Container, Column } from './styles';
 
 import Menu from '../../components/Menu';
 import Feed from '../../components/Feed';
+import Discover from '../../components/Discover';
 
 export default function Main() {
   useEffect(() => {
@@ -18,7 +19,9 @@ export default function Main() {
       <Column width="50%">
         <Feed />
       </Column>
-      <Column width="25%" borderLeft />
+      <Column width="25%" borderLeft>
+        <Discover />
+      </Column>
     </Container>
   );
 }
