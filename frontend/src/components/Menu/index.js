@@ -13,9 +13,10 @@ import {
   BookmarksIcon,
   ListIcon,
   ProfileIcon,
-  MoreIcon,
-  TweetButton
+  MoreIcon
 } from './styles';
+
+import TweetButton from '../TweetButton';
 
 export default function Menu() {
   return (
@@ -72,9 +73,9 @@ export default function Menu() {
         </MenuItem>
       </MenuItemContainer>
       <MenuItemContainer>
-        <TweetButton>
-          <span>Tweet</span>
-        </TweetButton>
+        <MenuItem height="50px" dontHover>
+          <TweetButton />
+        </MenuItem>
       </MenuItemContainer>
     </Container>
   );

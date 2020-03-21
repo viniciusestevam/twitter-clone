@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Twitter } from 'styled-icons/boxicons-logos';
 import { HomeCircle, UserCircle } from 'styled-icons/boxicons-solid';
 
-import { blue, lightBlue, darkBlue } from '../../global-styles';
+import { blue, lightBlue } from '../../global-styles';
 import { Hash, Bookmark } from 'styled-icons/boxicons-regular';
 import { NotificationsNone, ListAlt } from 'styled-icons/material';
 import { EmailOutline } from 'styled-icons/evaicons-outline';
@@ -26,9 +26,10 @@ export const MenuItemContainer = styled.span`
 
 export const MenuItem = styled.span`
   padding-right: 20px;
+  height: ${props => (props.height ? props.height : '')};
   :hover {
     color: ${blue};
-    background-color: ${lightBlue};
+    background-color: ${props => (props.dontHover ? '' : lightBlue)};
     cursor: pointer;
     border-radius: 25px;
   }
@@ -106,20 +107,4 @@ export const MoreIcon = styled(Ellipsis).attrs({
   height: '50px'
 })`
   ${iconPadMg}
-`;
-
-export const TweetButton = styled.div`
-  height: 55px;
-  cursor: pointer;
-  width: 100%;
-  border-radius: 50px;
-  background-color: ${blue};
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  :hover {
-    background-color: ${darkBlue};
-  }
 `;
