@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Container } from './styles';
 
-export default function TweetButton() {
+export default function TweetButton({ onClick }) {
   return (
-    <Container>
+    <Container onClick={onClick}>
       <strong>Tweet</strong>
     </Container>
   );

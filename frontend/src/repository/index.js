@@ -23,3 +23,11 @@ export const NEW_TWEET = gql`
     }
   }
 `;
+
+export const CREATE_TWEET = gql`
+  mutation createTweet($author: String!, $user: String!, $message: String!) {
+    createTweet(author: $author, user: $user, message: $message) {
+      id
+    }
+  }
+`;

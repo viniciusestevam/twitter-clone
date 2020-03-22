@@ -15,7 +15,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
     <Route
       {...rest}
       render={props =>
-        isAuthenticated ? <Component {...props} /> : <Redirect to="/login" />
+        isAuthenticated() ? <Component {...props} /> : <Redirect to="/login" />
       }
     />
   );
@@ -29,7 +29,7 @@ export default function Routes() {
           path="/login"
           exact
           render={props =>
-            isAuthenticated ? <Redirect to="/" /> : <Login {...props} />
+            isAuthenticated() ? <Redirect to="/" /> : <Login {...props} />
           }
         />
         <PrivateRoute path="/" exact component={Main} />

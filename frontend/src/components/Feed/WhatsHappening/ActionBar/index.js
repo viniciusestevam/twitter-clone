@@ -16,7 +16,7 @@ import {
 
 import TweetButton from '../../../TweetButton';
 
-export default function ActionBar() {
+export default function ActionBar({ handleTweetButton }) {
   return (
     <Container>
       <LeftIconsContainer>
@@ -30,7 +30,7 @@ export default function ActionBar() {
         <Divider />
         <PlusIcon />
         <ButtonContainer>
-          <TweetButton />
+          <TweetButton onClick={handleTweetButton} />
         </ButtonContainer>
       </RightIconsContainer>
     </Container>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import {
   Container,
@@ -16,7 +16,7 @@ import {
 } from './styles';
 
 export default function Discover() {
-  const [trends, setTrends] = useState([
+  const trends = [
     {
       id: 1,
       name: '#GraphQL',
@@ -47,7 +47,7 @@ export default function Discover() {
       tweets: '31K Tweets',
       link: 'https://github.com/estevam31'
     }
-  ]);
+  ];
 
   return (
     <Container>

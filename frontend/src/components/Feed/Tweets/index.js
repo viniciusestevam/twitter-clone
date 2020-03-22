@@ -22,11 +22,7 @@ import {
 
 import ReactTimeAgo from 'react-time-ago';
 
-import { NEW_TWEET } from '../../../repository';
-import { useEffect } from 'react';
-
 export default function Tweets({ tweets }) {
-  console.log(tweets);
   return (
     <Container>
       {tweets &&
