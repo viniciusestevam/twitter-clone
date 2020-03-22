@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import {
   Container,
@@ -22,47 +22,44 @@ import {
 
 import ReactTimeAgo from 'react-time-ago';
 
-export default function Tweets() {
-  const [tweets, setTweets] = useState([
-    {
-      id: 1,
-      author: 'julinho mequetrefe',
-      user: '@teste',
-      time: new Date(Date.now()),
-      message: 'teste'
-    }
-  ]);
+import { NEW_TWEET } from '../../../repository';
+import { useEffect } from 'react';
+
+export default function Tweets({ tweets }) {
+  console.log(tweets);
   return (
     <Container>
-      {tweets.map(t => (
-        <Tweet key={t.id}>
-          <ProfileContainer>
-            <ProfileIcon />
-          </ProfileContainer>
-          <RightContainer>
-            <Header>
-              <UserData>
-                <TweetAuthor>{t.author}</TweetAuthor>
-                <TweetData>{t.user}</TweetData>
-                <TweetData>
-                  · <ReactTimeAgo date={t.time} locale="en" />
-                </TweetData>
-              </UserData>
-              <ArrowDown />
-            </Header>
-            <Content>
-              <span>{t.message}</span>
-            </Content>
-            <Actions>
-              <Answer />
-              <Retweet />
-              <Like />
-              <Export />
-              <Stats />
-            </Actions>
-          </RightContainer>
-        </Tweet>
-      ))}
+      {tweets &&
+        tweets.map(tweet => (
+          <Tweet key={tweet.id}>
+            <ProfileContainer>
+              <ProfileIcon />
+            </ProfileContainer>
+            <RightContainer>
+              <Header>
+                <UserData>
+                  <TweetAuthor>{tweet.author}</TweetAuthor>
+                  <TweetData>{tweet.user}</TweetData>
+                  <TweetData>
+                    ·{' '}
+                    <ReactTimeAgo date={Number(tweet.createdAt)} locale="en" />
+                  </TweetData>
+                </UserData>
+                <ArrowDown />
+              </Header>
+              <Content>
+                <span>{tweet.message}</span>
+              </Content>
+              <Actions>
+                <Answer />
+                <Retweet />
+                <Like />
+                <Export />
+                <Stats />
+              </Actions>
+            </RightContainer>
+          </Tweet>
+        ))}
     </Container>
   );
 }

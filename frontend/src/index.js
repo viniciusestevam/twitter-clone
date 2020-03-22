@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ApolloProvider } from 'react-apollo';
+
+import { client } from './config/graphql-config';
+
 import App from './App';
+import './config/locale-config.js';
 
-import JavascriptTimeAgo from 'javascript-time-ago';
-
-// The desired locales.
-import en from 'javascript-time-ago/locale/en';
-import br from 'javascript-time-ago/locale/br';
-
-// Initialize the desired locales.
-JavascriptTimeAgo.locale(en);
-JavascriptTimeAgo.locale(br);
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
+  document.getElementById('root')
+);

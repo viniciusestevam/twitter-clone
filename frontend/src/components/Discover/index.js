@@ -24,25 +24,25 @@ export default function Discover() {
       link: 'https://www.graphql.com/'
     },
     {
-      id: 1,
+      id: 2,
       name: '#NodeJs',
       tweets: '999K Tweets',
       link: 'https://nodejs.org/en/'
     },
     {
-      id: 1,
+      id: 3,
       name: '#React',
       tweets: '378K Tweets',
       link: 'https://reactjs.org/'
     },
     {
-      id: 1,
+      id: 4,
       name: '#linkedin/viniciusestevam1',
       tweets: '31K Tweets',
       link: 'https://linkedin.com/in/vinicius-estevam1'
     },
     {
-      id: 1,
+      id: 5,
       name: '#github/estevam31',
       tweets: '31K Tweets',
       link: 'https://github.com/estevam31'
@@ -53,7 +53,7 @@ export default function Discover() {
     <Container>
       <SearchContainer>
         <SearchIcon />
-        <SearchInput value="Search Twitter" />
+        <SearchInput placeholder="Search Twitter" />
       </SearchContainer>
       <TrendsContainer>
         <TrendingTitle>

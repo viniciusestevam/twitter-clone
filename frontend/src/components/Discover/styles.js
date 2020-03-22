@@ -37,7 +37,9 @@ export const SearchIcon = styled(Search).attrs({
 export const SearchInput = styled.input`
   background: none;
   border: none;
-  color: ${darkGrey};
+  ::placeholder {
+    color: ${darkGrey};
+  }
 `;
 
 export const TrendsContainer = styled.div`
