@@ -7,7 +7,7 @@ const MESSAGE_CREATED = 'MESSAGE_CREATED';
 export default {
   Query: {
     tweets: () => {
-      return Tweet.find();
+      return Tweet.find().sort({ createdAt: -1 });
     }
   },
   Subscription: {
