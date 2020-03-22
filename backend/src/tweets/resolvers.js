@@ -18,7 +18,9 @@ export default {
   Mutation: {
     createTweet: async (_, args) => {
       const tweet = await Tweet.create({ ...args });
-      pubsub.publish(MESSAGE_CREATED, { ...args });
+      pubsub.publish(MESSAGE_CREATED, {
+        newTweet: tweet
+      });
       return tweet;
     }
   }
