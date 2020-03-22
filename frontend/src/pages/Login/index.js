@@ -13,7 +13,7 @@ import {
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-export default function Login() {
+export default function Login({ history }) {
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
   const nameLabel = 'Name';
@@ -24,8 +24,11 @@ export default function Login() {
   }, []);
 
   function handleButtonClick() {
-    sessionStorage.setItem('username', username);
-    sessionStorage.setItem('name', name);
+    const createdUsername = sessionStorage.setItem('username', username);
+    const createdName = sessionStorage.setItem('name', name);
+    if (createdUsername && createdName) {
+      history.push('/');
+    }
   }
 
   return (

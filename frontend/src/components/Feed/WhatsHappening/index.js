@@ -15,7 +15,7 @@ import { CREATE_TWEET } from '../../../repository';
 
 export default function WhatsHappening() {
   const [inputValue, setInputValue] = useState('');
-  const [createTweet, { data }] = useMutation(CREATE_TWEET);
+  const [createTweet] = useMutation(CREATE_TWEET);
 
   function handleTweetButton() {
     const tweet = {
