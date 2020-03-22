@@ -21,9 +21,12 @@ export const Container = styled.div`
   margin: 10px 0px;
   width: 100%;
   background-color: #fff;
+  border-left: 1px solid ${grey};
+  border-right: 1px solid ${grey};
 `;
 
 export const Tweet = styled.div`
+  margin-left: 1px solid ${grey};
   width: 100%;
   border-top: 1px solid ${grey};
   min-height: 100px;

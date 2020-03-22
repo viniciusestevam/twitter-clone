@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { darkGrey } from '../../../global-styles';
+import { darkGrey, grey } from '../../../global-styles';
 import { UserCircle } from 'styled-icons/boxicons-solid';
 
 export const Container = styled.div`
@@ -7,6 +7,8 @@ export const Container = styled.div`
   height: 150px;
   background-color: #fff;
   display: flex;
+  border-left: 1px solid ${grey};
+  border-right: 1px solid ${grey};
 `;
 
 export const ProfileContainer = styled.div`

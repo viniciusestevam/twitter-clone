@@ -24,9 +24,9 @@ export default function Login({ history }) {
   }, []);
 
   function handleButtonClick() {
-    const createdUsername = sessionStorage.setItem('username', username);
-    const createdName = sessionStorage.setItem('name', name);
-    if (createdUsername && createdName) {
+    sessionStorage.setItem('username', username);
+    sessionStorage.setItem('name', name);
+    if (sessionStorage.getItem('username') && sessionStorage.getItem('name')) {
       history.push('/');
     }
   }

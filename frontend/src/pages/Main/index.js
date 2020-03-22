@@ -13,13 +13,13 @@ export default function Main() {
 
   return (
     <Container>
-      <Column width="25%" borderRight justifyRight>
+      <Column width="25%" justifyRight>
         <Menu />
       </Column>
       <Column width="50%">
         <Feed />
       </Column>
-      <Column width="25%" borderLeft>
+      <Column width="25%">
         <Discover />
       </Column>
     </Container>

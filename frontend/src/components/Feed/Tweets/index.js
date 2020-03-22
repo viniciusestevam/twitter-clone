@@ -35,7 +35,7 @@ export default function Tweets({ tweets }) {
               <Header>
                 <UserData>
                   <TweetAuthor>{tweet.author}</TweetAuthor>
-                  <TweetData>{tweet.user}</TweetData>
+                  <TweetData>@{tweet.user}</TweetData>
                   <TweetData>
                     ·{' '}
                     <ReactTimeAgo date={Number(tweet.createdAt)} locale="en" />

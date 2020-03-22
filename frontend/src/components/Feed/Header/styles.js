@@ -10,6 +10,8 @@ export const Container = styled.div`
   background-color: #fff;
   justify-content: space-between;
   border-bottom: 1px solid ${grey};
+  border-left: 1px solid ${grey};
+  border-right: 1px solid ${grey};
 `;
 
 export const Title = styled.h3`
