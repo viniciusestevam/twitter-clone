@@ -9,7 +9,7 @@ mongoose
   })
   .then(() => {
     console.log('[DB] => Connected');
-    httpServer.listen({ port: 8000 }, () => {
+    httpServer.listen({ port: process.env.PORT || 8000 }, () => {
       console.log('[SERVER] => Apollo Server on http://localhost:8000/graphql');
     });
   });
