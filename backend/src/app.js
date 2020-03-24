@@ -13,7 +13,6 @@ const server = new ApolloServer({
 });
 
 app.use(cors());
-app.use(express.json());
 server.applyMiddleware({ app, path: '/graphql' });
 
 const httpServer = createServer(app);
